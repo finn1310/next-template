@@ -26,12 +26,12 @@ const largeStyle = {
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
   root: {
-    textTransform: "none",
+    textTransform: "none" as const,
     lineHeight: "normal",
     borderRadius: 2,
-    whiteSpace: "nowrap",
+    whiteSpace: "nowrap" as const,
     "&$disabled": {
-      cursor: "not-allowed",
+      cursor: "not-allowed" as const,
     },
   },
   contained: {

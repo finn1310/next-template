@@ -25,10 +25,13 @@ app
       }
     });
 
-    server.listen(3000, (err: any) => {
-      if (err) throw err;
-      console.log("> Ready on http://localhost:3000");
-    });
+    server
+      .listen(3000, () => {
+        console.log("> Ready on http://localhost:3000");
+      })
+      .on("error", (e) => {
+        console.log("Error happened: ", e.message);
+      });
   })
   .catch((ex) => {
     console.error(ex.stack);
